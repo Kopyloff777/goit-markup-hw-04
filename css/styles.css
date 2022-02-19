@@ -168,6 +168,12 @@ img {
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
+  background: var(--dark-bg-color);
+
+  background-image: url(../images/hero.jpg);
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .service-btn {
@@ -197,10 +203,6 @@ img {
 .service-btn:hover,
 .service-btn:focus {
   background-color: #188ce8;
-}
-
-.hero {
-  background: var(--dark-bg-color);
 }
 
 .hero-title {
@@ -254,7 +256,8 @@ img {
 }
 
 .activity-photo-title,
-.team-title {
+.team-title,
+.clients-title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -375,6 +378,16 @@ img {
 .footer-list-link:hover,
 .footer-list-link:focus {
   color: var(--accent-text-color);
+}
+
+.social-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
 }
 
 /* ========= End Footer ========= */
