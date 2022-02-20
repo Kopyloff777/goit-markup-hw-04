@@ -48,10 +48,6 @@ img {
   height: auto;
 }
 
-/* address { 
-  font-style: normal;
-}*/
-
 .list {
   list-style: none;
 }
@@ -71,17 +67,24 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  /* outline: 2px solid red; */
 }
 
 /* ========= Start Components========= */
 .contact-mail,
 .contact-phone {
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+}
+
+.contact-mail-icon,
+.contact-phone-icon {
+  margin-right: 10px;
+  fill: currentColor;
 }
 
 /* ========= End Components ========= */
@@ -166,14 +169,22 @@ img {
 /* ========= Start Hero ========= */
 
 .hero {
+  max-width: 1600px;
+  min-height: 600px;
   padding-top: 200px;
   padding-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
   background: var(--dark-bg-color);
-
-  background-image: url(../images/hero.jpg);
-  background-size: auto auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  background-position: 50% 50%;
 }
 
 .service-btn {
@@ -276,6 +287,21 @@ img {
   flex-basis: calc(100%-90px) / 3;
 }
 
+.activity-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+  background: #f5f4fa;
+  border-radius: 4px;
+}
+.activity-icon-img {
+  width: 70px;
+  height: 70px;
+}
+
 /* ========= End Activity ========= */
 
 /* ========= Start Team ========= */
@@ -334,6 +360,22 @@ img {
 
 /* ========= End Team ========= */
 
+/* ========= Start Clients ========= */
+
+.clients-list {
+  display: flex;
+}
+
+.clients-list-item {
+  flex-basis: calc(100%-180px) / 6;
+}
+
+.clients-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+/* ========= End Clients ========= */
+
 /* ========= Start Footer ========= */
 
 .footer {
@@ -390,6 +432,27 @@ img {
   color: var(--primary-white-color);
 }
 
+.social-list {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  outline: 1px solid tomato;
+}
+/* .social-list-item { 
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}*/
+
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+}
+
 /* ========= End Footer ========= */
 
 /* ========= Start Portfolio ========= */
@@ -435,6 +498,11 @@ img {
   margin-top: var(--card-set-gap);
 }
 
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .card-content {
   padding: 20px 24px;
   border-left: 1px solid #eeeeee;
@@ -461,6 +529,9 @@ img {
 .btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 /* ========= End Portfolio ========= */
