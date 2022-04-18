@@ -363,7 +363,12 @@ img {
   fill: #afb1b8;
 }
 
-.team-social-list-icon:hover,
+.social-list-item-link:focus .team-social-list-icon,
+.social-list-item-link:hover .team-social-list-icon {
+  fill: #ffffff;
+}
+
+/*.team-social-list-icon:hover,
 .team-social-list-icon:focus {
   fill: #ffffff;
 }
@@ -379,7 +384,7 @@ img {
 .clients-icon {
   display: flex;
   width: 170px;
-  height: 92px;
+  height: 93px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
@@ -393,11 +398,13 @@ img {
   padding: 16px 32px;
 }
 
-.clients-icon-img:hover {
+.clients-icon:hover .clients-icon-img,
+.clients-icon:focus .clients-icon-img {
   fill: var(--accent-text-color);
 }
 
-.clients-icon:hover {
+.clients-icon:hover,
+.clients-icon:focus {
   color: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
 }
